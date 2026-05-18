@@ -142,6 +142,20 @@ Copies `is_support_call` from `enriched_dataset.json` into `named_clustered_data
 
 ---
 
+## Models Used
+
+| Stage | Model | Provider | Purpose |
+|---|---|---|---|
+| Semantic Chunking | `gpt-4o-mini` | OpenAI (default) | Segments transcripts into labelled semantic chunks with sentiment and topic tags |
+| Semantic Chunking | `openai/gpt-oss-20b` | Groq (alternative) | Same as above, faster/cheaper via Groq API |
+| Semantic Chunking | `qwen2.5:7b` | Ollama (alternative) | Local offline chunking |
+| Embedding | `BAAI/bge-large-en-v1.5` | SentenceTransformers | Generates 1024-dim embeddings from chunk label + summary for clustering |
+| Cluster Naming | `gpt-4o-mini` | OpenAI | Assigns short business-oriented names to each cluster |
+
+The active chunking provider is set via `chunking.provider` in `config/config.yaml` (`openai`, `groq`, or `ollama`). Embeddings always use `BAAI/bge-large-en-v1.5`.
+
+---
+
 ## Configuration
 
 All file paths and model settings live in `config/config.yaml`. No hardcoded paths exist in any script.
