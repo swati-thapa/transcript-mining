@@ -19,6 +19,9 @@ data/raw/dataset/
 *.bmp
 *.tiff
 
+# HTML exports
+sankey_cluster_topic.html
+
 # macOS
 .DS_Store
 .AppleDouble
