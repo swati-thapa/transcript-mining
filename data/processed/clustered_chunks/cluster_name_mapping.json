@@ -1,0 +1,82 @@
+[
+  {
+    "cluster_id": 0,
+    "cluster_name": "Outage Communication"
+  },
+  {
+    "cluster_id": 1,
+    "cluster_name": "Onboarding Process"
+  },
+  {
+    "cluster_id": 2,
+    "cluster_name": "Compliance Reporting"
+  },
+  {
+    "cluster_id": 3,
+    "cluster_name": "Renewal Negotiation"
+  },
+  {
+    "cluster_id": 4,
+    "cluster_name": "Competitive Insights"
+  },
+  {
+    "cluster_id": 5,
+    "cluster_name": "Audit Preparation"
+  },
+  {
+    "cluster_id": 6,
+    "cluster_name": "Compliance Enhancements"
+  },
+  {
+    "cluster_id": 7,
+    "cluster_name": "Follow-Up Commitments"
+  },
+  {
+    "cluster_id": 8,
+    "cluster_name": "Infrastructure Performance"
+  },
+  {
+    "cluster_id": 9,
+    "cluster_name": "Incident Remediation"
+  },
+  {
+    "cluster_id": 10,
+    "cluster_name": "Alert Management Challenges"
+  },
+  {
+    "cluster_id": 11,
+    "cluster_name": "Restore User Experience"
+  },
+  {
+    "cluster_id": 12,
+    "cluster_name": "Launch Readiness"
+  },
+  {
+    "cluster_id": 13,
+    "cluster_name": "Spring Launch Impact"
+  },
+  {
+    "cluster_id": 14,
+    "cluster_name": "Service Performance Evaluation"
+  },
+  {
+    "cluster_id": 15,
+    "cluster_name": "PDF Rendering Issues"
+  },
+  {
+    "cluster_id": 16,
+    "cluster_name": "Billing Discrepancies"
+  },
+  {
+    "cluster_id": 17,
+    "cluster_name": "Postmortem Analysis"
+  },
+  {
+    "cluster_id": 18,
+    "cluster_name": "Authentication Challenges"
+  },
+  {
+    "cluster_id": 19,
+    "cluster_name": "Sprint Planning"
+  }
+]

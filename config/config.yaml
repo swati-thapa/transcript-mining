@@ -1,0 +1,62 @@
+paths:
+  consolidated_dataset: data/consolidated_dataset.json
+  chunking_prompt: config/prompts/chunking_prompt.txt
+  chunked_dataset: data/interim/semantic_chunks/chunked_dataset.json
+  embedded_dataset: data/processed/chunk_embeddings/chunked_dataset_with_embeddings.json
+  flat_embeddings: data/processed/chunk_embeddings/chunk_embeddings_flat.json
+  chunking_checkpoint: data/interim/semantic_chunks/chunked_dataset_checkpoint.json
+  enriched_dataset: data/interim/enriched_dataset.json
+  embedded_dataset_substantive: data/processed/chunk_embeddings/chunked_dataset_with_embeddings_substantive.json
+
+
+  clustered_chunks_flat: data/processed/clustered_chunks/clustered_chunks_flat.json
+  chunked_dataset_with_clusters: data/processed/clustered_chunks/chunked_dataset_with_clusters.json
+  cluster_summary: data/processed/clustered_chunks/cluster_summary.json
+  flat_embeddings_substantive: data/processed/chunk_embeddings/chunk_embeddings_flat_substantive.json
+  flat_embeddings_scaffolding: data/processed/chunk_embeddings/chunk_embeddings_flat_scaffolding.json
+  cluster_naming_prompt: config/prompts/cluster_naming_prompt.txt
+  cluster_name_mapping: data/processed/clustered_chunks/cluster_name_mapping.json
+  named_clustered_dataset: data/processed/clustered_chunks/named_clustered_dataset.json
+  named_clustered_dataset_with_support: data/processed/clustered_chunks/named_clustered_dataset_with_support.json
+
+chunking:
+  provider: openai
+  max_transcripts: 100
+  checkpoint_every: 1
+  resume_from_checkpoint: true
+
+  groq:
+    model: openai/gpt-oss-20b
+    base_url: https://api.groq.com/openai/v1
+    temperature: 0
+    max_tokens: 3072
+
+  ollama:
+    model: qwen2.5:7b
+    url: http://localhost:11434/api/chat
+    temperature: 0
+    timeout_seconds: 180
+
+  openai:
+    model: gpt-4o-mini
+    temperature: 0
+
+naming:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0
+  max_tokens: 20
+
+embedding:
+  provider: sentence_transformers
+  model: BAAI/bge-large-en-v1.5
+  normalize_embeddings: true
+  batch_size: 32
+
+clustering:
+  method: agglomerative
+  metric: cosine
+  linkage: average
+  n_clusters: 20
+
+  

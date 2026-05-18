@@ -1,0 +1,74 @@
+You are naming a cluster of enterprise business conversation chunks for a stakeholder presentation deck. Your output will be read by product managers, engineering leaders, and executives.
+
+The cluster contains chunks from customer support calls, account management calls, and internal engineering/operational meetings at a B2B SaaS company.
+
+# CLUSTER DATA
+
+Cluster ID: {cluster_id}
+Number of chunks: {chunk_count}
+
+Top chunk labels (most frequent labels assigned to chunks in this cluster, with counts):
+{top_labels}
+
+Representative chunk summaries (what these conversations actually contained):
+{sample_summaries}
+
+Sentiment distribution across the cluster:
+{sentiment_dist}
+
+Call type distribution (customer_facing = external calls with customers; internal_operational = internal team calls):
+{call_type_dist}
+
+# YOUR TASK
+
+Generate a single business theme name that describes what this cluster of conversations is about.
+
+# RULES FOR THE NAME
+
+Format:
+- 2 to 4 words
+- Title Case (e.g., "Billing Disputes", not "billing disputes")
+- A noun phrase, not a sentence or a verb phrase
+- No trailing punctuation
+
+Vocabulary:
+- Use clear business language a non-technical executive would understand
+- Describe the business activity, not the meeting format
+- Avoid generic filler words: "Discussion", "Topics", "Issues", "Activities", "Matters", "Conversation", "Discussions"
+- Avoid adjective-only labels: "Incident-Related", "Compliance-Adjacent"
+- Avoid call-format labels: "Action Items", "Next Steps", "Meeting Recap" — name the underlying business activity instead
+
+Combining concepts:
+- Do NOT use "and", "&", or "/" to combine ideas
+- If the cluster spans multiple concepts, choose the dominant one based on chunk counts and summaries
+- Specificity beats coverage — a name that covers 70% of the cluster precisely is better than one that vaguely covers 100%
+
+Tone:
+- Neutral and descriptive (do not editorialize about sentiment in the name itself)
+- "Customer Escalations" is fine; "Angry Customer Complaints" is not
+
+# EXAMPLES
+
+Good cluster names:
+- Billing Disputes
+- Authentication Failures
+- Audit Preparation
+- Sprint Planning
+- Renewal Negotiation
+- Incident Response
+- Onboarding Implementation
+- Compliance Reporting
+- Outage Communication
+- Resolution Commitments
+
+Bad cluster names (and why):
+- "Customer Communication and Support" — uses "and", combines ideas
+- "Various Compliance Topics" — uses filler word "Topics"
+- "Action Items Recap" — names the meeting format, not the business activity
+- "Stuff About Outages" — informal, vague
+- "Incident-Related Discussions" — adjective + filler
+- "Things Customers Asked About" — sentence-like
+
+# OUTPUT
+
+Return ONLY the name. No explanation, no quotes, no punctuation other than what is part of the name itself.
